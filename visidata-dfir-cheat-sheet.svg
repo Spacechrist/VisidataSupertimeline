@@ -64,8 +64,10 @@
 <rect x="36" y="632" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
 <text x="44" y="651" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">&quot;</text>
 <text x="79" y="651" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">open selected rows in a new sheet</text>
-<rect x="36" y="677" width="462" height="45" rx="8" fill="#e0f3da" stroke="none"/>
-<text x="48" y="705" fill="#244828" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="700">Regex: ^(EVT|FILE|REG)$</text>
+<rect x="36" y="668" width="462" height="65" rx="8" fill="#e0f3da" stroke="none"/>
+<text x="48" y="686" fill="#244828" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Source regex  ^(EVT|FILE|REG)$</text>
+<text x="48" y="706" fill="#244828" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="700">On datetime, press gu, then | and enter ^2023-01-</text>
+<text x="48" y="724" fill="#244828" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14">Press Enter, then &quot; to open January 1–31, 2023.</text>
 <rect x="540" y="406" width="502" height="338" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
 <rect x="541" y="407" width="500" height="44" rx="11" fill="#193a3c" stroke="none"/>
 <rect x="541" y="441" width="500" height="12" rx="0" fill="#193a3c" stroke="none"/>
