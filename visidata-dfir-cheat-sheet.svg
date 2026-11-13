@@ -41,6 +41,9 @@
 <rect x="558" y="324" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
 <text x="566" y="343" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">/</text>
 <text x="601" y="343" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">search active column</text>
+<rect x="765" y="324" width="35" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="773" y="343" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g/</text>
+<text x="813" y="343" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">search all visible columns</text>
 <text x="558" y="372" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">n / N  =  next / previous search match</text>
 <rect x="18" y="406" width="501" height="338" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
 <rect x="19" y="407" width="499" height="44" rx="11" fill="#193a3c" stroke="none"/>
@@ -49,21 +52,24 @@
 <rect x="36" y="447" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
 <text x="44" y="466" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">|</text>
 <text x="79" y="466" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select regex matches in active column</text>
-<rect x="36" y="484" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
-<text x="44" y="503" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">\</text>
-<text x="79" y="503" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">unselect regex matches in active column</text>
-<rect x="36" y="521" width="34.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
-<text x="44" y="540" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g|</text>
-<text x="83.8" y="540" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select matches in visible columns</text>
-<rect x="36" y="558" width="100.60000000000001" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
-<text x="44" y="577" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">s / t / u</text>
-<text x="149.60000000000002" y="577" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select / toggle / unselect row</text>
-<rect x="36" y="595" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
-<text x="44" y="614" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gs / gu</text>
-<text x="130.8" y="614" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select all / clear selections</text>
-<rect x="36" y="632" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
-<text x="44" y="651" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">&quot;</text>
-<text x="79" y="651" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">open selected rows in a new sheet</text>
+<rect x="36" y="478" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="497" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">\</text>
+<text x="79" y="497" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">unselect regex matches in active column</text>
+<rect x="36" y="509" width="34.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="528" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g|</text>
+<text x="83.8" y="528" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select matches in visible columns</text>
+<rect x="36" y="540" width="100.60000000000001" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="559" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">s / t / u</text>
+<text x="149.60000000000002" y="559" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select / toggle / unselect row</text>
+<rect x="36" y="571" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="590" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gs / gu</text>
+<text x="130.8" y="590" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select all / clear selections</text>
+<rect x="36" y="602" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="621" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">&quot;</text>
+<text x="79" y="621" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">open selected rows in a new sheet</text>
+<rect x="36" y="633" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="652" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">,</text>
+<text x="79" y="652" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select rows with the same value as the current cell</text>
 <rect x="36" y="668" width="462" height="65" rx="8" fill="#e0f3da" stroke="none"/>
 <text x="48" y="686" fill="#244828" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Source regex  ^(EVT|FILE|REG)$</text>
 <text x="48" y="706" fill="#244828" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="700">On datetime, press gu, then | and enter ^2023-01-</text>
