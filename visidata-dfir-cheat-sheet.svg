@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="1510" viewBox="0 0 1060 1510" role="img" aria-label="VisiData DFIR one-page shortcut and artifact color cheat sheet"><title>VisiData DFIR Cheat Sheet</title><desc>Printable reference for VisiData 3.5, Plaso supertimelines, source filtering, pivot tables, and Timeline Explorer artifact colors</desc><rect width="1060" height="1510" fill="#f4f6f2"/>
+<rect x="18" y="15" width="1024" height="93" rx="17" fill="#152e31" stroke="none"/>
+<text x="44" y="76" fill="#91f264" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="47" font-weight="700">&gt;_</text>
+<text x="155" y="61" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="760">VisiData DFIR Cheat Sheet</text>
+<text x="155" y="90" fill="#c9e3e0" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="19" font-weight="400">VisiData Supertimeline · Plaso CSVs</text>
+<circle cx="941" cy="45" r="8" fill="#ee6464"/>
+<circle cx="966" cy="45" r="8" fill="#f1b94b"/>
+<circle cx="991" cy="45" r="8" fill="#64cb80"/>
+<rect x="18" y="123" width="501" height="270" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="19" y="124" width="499" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="19" y="158" width="499" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="36" y="153" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Theme / background</text>
+<text x="37" y="187" fill="#202f38" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="15" font-weight="600">Edit  ~/.config/visidata/irflow_visidata.py</text>
+<text x="37" y="217" fill="#202f38" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">IRFLOW_BASE_COLOR = 'white on 242'</text>
+<text x="37" y="246" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">Controls the ordinary canvas, not the forensic colors.</text>
+<rect x="36" y="262" width="53.6" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="281" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Gray</text>
+<text x="102.6" y="281" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">white on 242   ·   medium gray</text>
+<rect x="36" y="300" width="63" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="319" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Light</text>
+<text x="112" y="319" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">black on 253   ·   light gray</text>
+<rect x="36" y="338" width="53.6" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="357" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Dark</text>
+<text x="102.6" y="357" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">white on 235   ·   charcoal gray</text>
+<rect x="540" y="123" width="502" height="270" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="541" y="124" width="500" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="541" y="158" width="500" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="558" y="153" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Move / inspect</text>
+<rect x="558" y="168" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="187" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">h j k l</text>
+<text x="652.8" y="187" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">or arrow keys to move</text>
+<rect x="558" y="207" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="226" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">q</text>
+<text x="601" y="226" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">go back one sheet</text>
+<rect x="558" y="246" width="63" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="265" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Space</text>
+<text x="634" y="265" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">command palette</text>
+<rect x="558" y="285" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="304" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Shift+C</text>
+<text x="652.8" y="304" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">columns configuration</text>
+<rect x="558" y="324" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="343" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">/</text>
+<text x="601" y="343" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">search active column</text>
+<text x="558" y="372" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">n / N  =  next / previous search match</text>
+<rect x="18" y="406" width="501" height="338" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="19" y="407" width="499" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="19" y="441" width="499" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="36" y="436" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Filtering / selection</text>
+<rect x="36" y="447" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="466" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">|</text>
+<text x="79" y="466" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select regex matches in active column</text>
+<rect x="36" y="484" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="503" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">\</text>
+<text x="79" y="503" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">unselect regex matches in active column</text>
+<rect x="36" y="521" width="34.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="540" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g|</text>
+<text x="83.8" y="540" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select matches in visible columns</text>
+<rect x="36" y="558" width="100.60000000000001" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="577" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">s / t / u</text>
+<text x="149.60000000000002" y="577" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select / toggle / unselect row</text>
+<rect x="36" y="595" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="614" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gs / gu</text>
+<text x="130.8" y="614" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">select all / clear selections</text>
+<rect x="36" y="632" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="651" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">&quot;</text>
+<text x="79" y="651" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">open selected rows in a new sheet</text>
+<rect x="36" y="677" width="462" height="45" rx="8" fill="#e0f3da" stroke="none"/>
+<text x="48" y="705" fill="#244828" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="700">Regex: ^(EVT|FILE|REG)$</text>
+<rect x="540" y="406" width="502" height="338" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="541" y="407" width="500" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="541" y="441" width="500" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="558" y="436" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Frequency / pivot tables</text>
+<rect x="558" y="447" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="466" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Shift+F</text>
+<text x="652.8" y="466" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">frequency of current column</text>
+<rect x="558" y="484" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="503" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">!</text>
+<text x="601" y="503" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">mark current column as a key</text>
+<rect x="558" y="521" width="34.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="540" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gF</text>
+<text x="605.8" y="540" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">frequency grouped by all key columns</text>
+<rect x="558" y="558" width="81.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="577" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">Shift+W</text>
+<text x="652.8" y="577" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">pivot on current column</text>
+<rect x="558" y="602" width="461" height="121" rx="9" fill="#edf6e7" stroke="none"/>
+<text x="573" y="628" fill="#23452b" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700">Basic host + source pivot</text>
+<text x="574" y="657" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">1. Mark host and source with !</text>
+<text x="574" y="679" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">2. Move to type and press Shift+W</text>
+<text x="574" y="702" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">3. Default measure = row count</text>
+<rect x="18" y="758" width="501" height="264" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="19" y="759" width="499" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="19" y="793" width="499" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="36" y="788" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Column width / layout</text>
+<rect x="36" y="799" width="30" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="818" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">_</text>
+<text x="79" y="818" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">auto-fit current column</text>
+<rect x="36" y="835" width="34.8" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="854" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">z_</text>
+<text x="83.8" y="854" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">set exact current column width</text>
+<rect x="36" y="871" width="91.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="890" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g_ / gz_</text>
+<text x="140.2" y="890" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">fit all / set width for all</text>
+<rect x="36" y="907" width="72.4" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="926" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">- / gv</text>
+<text x="121.4" y="926" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">hide / unhide columns</text>
+<rect x="36" y="943" width="63" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="44" y="962" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">H / L</text>
+<text x="112" y="962" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">move column left / right</text>
+<text x="36" y="996" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">Shift+C opens editable column settings.</text>
+<rect x="540" y="758" width="502" height="264" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="541" y="759" width="500" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="541" y="793" width="500" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="558" y="788" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Experimental Windows Event views</text>
+<rect x="558" y="797" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="816" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz1</text>
+<text x="615.2" y="816" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">4624  successful logon</text>
+<rect x="558" y="832" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="851" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz2</text>
+<text x="615.2" y="851" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">4625  failed logon</text>
+<rect x="558" y="867" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="886" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz3</text>
+<text x="615.2" y="886" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">4688  process creation</text>
+<rect x="558" y="902" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="921" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz4</text>
+<text x="615.2" y="921" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">7045  service installation</text>
+<rect x="558" y="937" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="956" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz5</text>
+<text x="615.2" y="956" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">1102  security log cleared</text>
+<rect x="558" y="972" width="44.2" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
+<text x="566" y="991" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">gz0</text>
+<text x="615.2" y="991" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">prompt for custom Event ID</text>
+<rect x="18" y="1035" width="1024" height="382" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
+<rect x="19" y="1036" width="1022" height="44" rx="11" fill="#193a3c" stroke="none"/>
+<rect x="19" y="1070" width="1022" height="12" rx="0" fill="#193a3c" stroke="none"/>
+<text x="36" y="1065" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="21" font-weight="700">Timeline Explorer artifact colors (Plaso desc cell)</text>
+<rect x="35" y="1093" width="552" height="40" rx="3" fill="#e8eeee" stroke="none"/>
+<text x="52" y="1119" fill="#1b3438" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="700">Artifact category</text>
+<text x="354" y="1119" fill="#1b3438" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="700">Color / hex</text>
+<rect x="35" y="1134" width="552" height="37" rx="0" fill="#fafcfc" stroke="#c7d3d5"/>
+<text x="50" y="1159" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">Execution</text>
+<rect x="325" y="1135" width="262" height="35" rx="0" fill="#CA0002" stroke="none"/>
+<text x="355" y="1159" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#CA0002</text>
+<rect x="35" y="1172" width="552" height="37" rx="0" fill="#f1f5f5" stroke="#c7d3d5"/>
+<text x="50" y="1197" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">FileOpening</text>
+<rect x="325" y="1173" width="262" height="35" rx="0" fill="#92D050" stroke="none"/>
+<text x="355" y="1197" fill="#141d10" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#92D050</text>
+<rect x="35" y="1210" width="552" height="37" rx="0" fill="#fafcfc" stroke="#c7d3d5"/>
+<text x="50" y="1235" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">FolderOpening</text>
+<rect x="325" y="1211" width="262" height="35" rx="0" fill="#00B050" stroke="none"/>
+<text x="355" y="1235" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#00B050</text>
+<rect x="35" y="1248" width="552" height="37" rx="0" fill="#f1f5f5" stroke="#c7d3d5"/>
+<text x="50" y="1273" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">WebHistory</text>
+<rect x="325" y="1249" width="262" height="35" rx="0" fill="#FFC000" stroke="none"/>
+<text x="355" y="1273" fill="#171717" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#FFC000</text>
+<rect x="35" y="1286" width="552" height="37" rx="0" fill="#fafcfc" stroke="#c7d3d5"/>
+<text x="50" y="1311" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">Device/USBUsage</text>
+<rect x="325" y="1287" width="262" height="35" rx="0" fill="#548DD4" stroke="none"/>
+<text x="355" y="1311" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#548DD4</text>
+<rect x="35" y="1324" width="552" height="37" rx="0" fill="#f1f5f5" stroke="#c7d3d5"/>
+<text x="50" y="1349" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">DeletedData</text>
+<rect x="325" y="1325" width="262" height="35" rx="0" fill="#000000" stroke="none"/>
+<text x="355" y="1349" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#000000</text>
+<rect x="35" y="1362" width="552" height="37" rx="0" fill="#fafcfc" stroke="#c7d3d5"/>
+<text x="50" y="1387" fill="#1e3435" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="650">LogFile</text>
+<rect x="325" y="1363" width="262" height="35" rx="0" fill="#F3F1EA" stroke="none"/>
+<text x="355" y="1387" fill="#222222" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700">#F3F1EA</text>
+<line x1="620" y1="1110" x2="620" y2="1384" stroke="#a9bcbc" stroke-width="2"/>
+<text x="646" y="1149" fill="#22393d" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700">Seven fixed classification colors</text>
+<text x="646" y="1181" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">Only the Plaso desc cell is colored.</text>
+<text x="646" y="1222" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">Unmatched artifacts remain neutral.</text>
+<text x="646" y="1263" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">Colors describe event activity patterns,</text>
+<text x="646" y="1286" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">not maliciousness or risk.</text>
+<text x="646" y="1330" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">No extra Event ID color rules.</text>
+<text x="646" y="1371" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">The gray canvas is separate.</text>
+<rect x="18" y="1431" width="1024" height="54" rx="10" fill="#def1e0" stroke="none"/>
+<text x="35" y="1465" fill="#206e42" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800">TIP</text>
+<text x="91" y="1465" fill="#24432e" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="650">For large timelines: Shift+F → mark keys with ! → gF or Shift+W.</text>
+</svg>
