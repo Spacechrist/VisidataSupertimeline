@@ -16,7 +16,7 @@ and Timeline Explorer classifies its desc text (not the source column).
 
 Exact rule matching and color order; hex colors approximated to xterm-256.
 """
-from visidata import TableSheet, RowColorizer, CellColorizer, Column, options, vd
+from visidata import TableSheet, RowColorizer, CellColorizer, Column, TextSheet, options, vd
 from datetime import date as _irflow_date
 from pathlib import Path
 import hashlib
@@ -750,3 +750,21 @@ TableSheet.addCommand('gz0', 'open-irflow-event-input',
                       '_irflow_open_analysis_view(sheet, vd.input("Windows Event ID: "))',
                       'Open experimental Windows Event ID analysis view')
 vd.addGlobals(_irflow_open_analysis_view=_irflow_open_analysis_view)
+
+def _irflow_open_wrapped_cell(sheet):
+    if sheet.cursorRow is None or sheet.cursorCol is None:
+        vd.warning('Move to a cell to open its contents')
+        return
+
+    value = sheet.cursorCol.getValue(sheet.cursorRow)
+    text = '' if value is None else str(value)
+    viewer = TextSheet(f'{sheet.name}[{sheet.cursorRowIndex + 1}].{sheet.cursorCol.name}',
+                       source=text.splitlines() or [''])
+    viewer.options.wrap = True
+    vd.push(viewer)
+
+
+TableSheet.addCommand('gzEnter', 'open-irflow-wrapped-cell',
+                      '_irflow_open_wrapped_cell(sheet)',
+                      'Open the full current cell in a word-wrapped text viewer')
+vd.addGlobals(_irflow_open_wrapped_cell=_irflow_open_wrapped_cell)

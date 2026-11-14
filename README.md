@@ -279,6 +279,10 @@ If `extra` does not exist, the annotation columns appear at the end.
 
 **To comment on an event:** Move to the same row's **Comment** cell, press `e`, type a note such as `Unexpected remote login; correlate VPN logs`, and press Enter. The note is saved separately from the CSV. Use filtering on **Tags** later to review your marked events.
 
+### Read the full contents of a cell
+
+Move to a cell and press `g`, `z`, then Enter to open its full value in a wrapped text viewer. Use the arrow keys or Page Up and Page Down to scroll, and press `q` to return to the timeline. This works on EVTX messages, browser URLs, and other columns. You can also choose `open-irflow-wrapped-cell` from the command palette (Space). The viewer works in VisiData without an external editor and opens a copy of the cell text.
+
 ### Setting up Nano for longer comments
 
 If an external editor says `$EDITOR not set`, configure Fish:
