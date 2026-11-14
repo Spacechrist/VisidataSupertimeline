@@ -17,6 +17,7 @@ and Timeline Explorer classifies its desc text (not the source column).
 Exact rule matching and color order; hex colors approximated to xterm-256.
 """
 from visidata import TableSheet, RowColorizer, CellColorizer, Column, options, vd
+from datetime import date as _irflow_date
 from pathlib import Path
 import hashlib
 import json
@@ -561,12 +562,20 @@ def _irflow_add_plaso_datetime(sheet):
     def combine_datetime(col, row):
         date_text = _irflow_value(date_col, row).strip()
         time_text = _irflow_value(time_col, row).strip()
-        return (date_text + ' ' + time_text).strip()
+        legacy_date = re.fullmatch(r'([0-9]{2})/([0-9]{2})/([0-9]{4})', date_text)
+        if legacy_date:
+            month, day, year = legacy_date.groups()
+            date_text = f'{year}-{month}-{day}'
+        try:
+            date_text = _irflow_date.fromisoformat(date_text).isoformat()
+        except ValueError:
+            return ''
+        return f'{date_text} {time_text}' if time_text else ''
 
     # A synthetic display column; do not alter the original date/time values.
     # Restore the modified flag since this happens automatically on load.
     was_modified = getattr(sheet, 'hasBeenModified', False)
-    sheet.addColumn(Column('datetime', width=21, getter=combine_datetime), index=0)
+    sheet.addColumn(Column('datetime', width=29, getter=combine_datetime), index=0)
     if IRFLOW_HIDE_SPLIT_PLASO_DATE_TIME:
         date_col.hidden = True
         time_col.hidden = True

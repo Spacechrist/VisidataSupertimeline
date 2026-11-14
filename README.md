@@ -381,16 +381,16 @@ References: [Timeline Explorer source](https://github.com/EricZimmerman/TLEFileP
 
 ### Combined datetime
 
-A recognized Plaso timeline gets a new **string display column** that joins its existing `date` and `time` fields, for example:
+The merged `datetime` column displays Plaso timestamps as `YYYY-MM-DD HH:MM:SS`. It carries over any fractional seconds from the original time field.
 
 ```text
-date        time      -> datetime
-01/01/2023  11:42:10     01/01/2023 11:42:10
+date        time          -> datetime
+01/31/2023  11:42:10.123     2023-01-31 11:42:10.123
 ```
 
-The original columns are **hidden, not removed**; the timezone is unchanged. Press `gv` to unhide them.
+With the cursor on `datetime`, press `[` for oldest first or `]` for newest first. For a month filter, press `gu` to clear the selection, then `|` and enter a pattern such as `^2023-01-`. Press Enter, then `"` to open the matched rows.
 
-**This is not a parsed timezone-aware datetime type.** Do not assume string sorting across months or years produces chronological order. For sound time correlation, use the original structured timestamps, timestamps in ISO format, or parsed date types.
+The merged text sorts chronologically within the same timezone. VisiData uses the export's timestamps as provided. Files that already supply a `datetime` column keep their original values. If the merged date is invalid or the date or time is missing, the merged cell is blank. Press `gv` to show the original date and time columns.
 
 ## 9. Troubleshooting
 
