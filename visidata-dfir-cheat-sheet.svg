@@ -44,7 +44,8 @@
 <rect x="765" y="324" width="35" height="27" rx="5" fill="#e9edf0" stroke="#8d9ca2"/>
 <text x="773" y="343" fill="#142931" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14" font-weight="700">g/</text>
 <text x="813" y="343" fill="#1f3030" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" font-weight="400">search all visible columns</text>
-<text x="558" y="372" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">n / N  =  next / previous search match</text>
+<text x="558" y="372" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">n / N  next / previous match</text>
+<text id="wrapped-cell" x="783" y="372" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">gzEnter  wrap full cell · q to return</text>
 <rect x="18" y="406" width="501" height="338" rx="13" fill="#ffffff" stroke="#b6c8c8"/>
 <rect x="19" y="407" width="499" height="44" rx="11" fill="#193a3c" stroke="none"/>
 <rect x="19" y="441" width="499" height="12" rx="0" fill="#193a3c" stroke="none"/>
@@ -181,7 +182,8 @@
 <text x="646" y="1286" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">not maliciousness or risk.</text>
 <text x="646" y="1330" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">No extra Event ID color rules.</text>
 <text x="646" y="1371" fill="#344955" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="400">The gray canvas is separate.</text>
-<rect x="18" y="1431" width="1024" height="54" rx="10" fill="#def1e0" stroke="none"/>
-<text x="35" y="1465" fill="#206e42" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800">TIP</text>
-<text x="91" y="1465" fill="#24432e" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="650">For large timelines: Shift+F → mark keys with ! → gF or Shift+W.</text>
+<rect x="18" y="1431" width="1024" height="63" rx="10" fill="#def1e0" stroke="none"/>
+<text x="35" y="1457" fill="#206e42" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800">TIP</text>
+<text x="91" y="1457" fill="#24432e" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="650">For large timelines: Shift+F → mark keys with ! → gF or Shift+W.</text>
+<text id="config-loader" x="35" y="1481" fill="#24432e" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">Load the extension from ~/.config/visidata/config.py. Add the Python loader there, then restart VisiData.</text>
 </svg>
