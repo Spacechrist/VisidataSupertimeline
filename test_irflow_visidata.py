@@ -70,6 +70,14 @@ class RowColorizer:
     def __init__(self, precedence, coloropt, func):
         self.precedence, self.coloropt, self.func = precedence, coloropt, func
 
+class TextSheet:
+    def __init__(self, name, source):
+        self.name = name
+        self.source = source
+        self.options = types.SimpleNamespace(wrap=False)
+
+
+stub.TextSheet = TextSheet
 stub.TableSheet = TableSheet
 stub.RowColorizer = RowColorizer
 stub.CellColorizer = RowColorizer
@@ -355,7 +363,7 @@ class Tests(unittest.TestCase):
         s = Sheet(PLASO_COLS, [row])
         TableSheet._after_afterLoad(s)
         self.assertEqual(s.columns[0].name, "datetime")
-        self.assertEqual(s.columns[0].getValue(row), "01/01/2023 11:42:10")
+        self.assertEqual(s.columns[0].getValue(row), "2023-01-01 11:42:10")
         self.assertEqual(row["date"], "01/01/2023")
         self.assertEqual(row["time"], "11:42:10")
         self.assertFalse(s.hasBeenModified)
