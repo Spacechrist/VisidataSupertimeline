@@ -6,6 +6,16 @@ This standalone VisiData extension reproduces Eric Zimmerman's Timeline Explorer
 
 **Experimental features.** The Windows Event Log views, including successful and failed logon analysis, are unfinished. They may miss records or extract fields incorrectly. Verify findings against the original EVTX records.
 
+## Parser Category menu
+
+An optional permanent **Category** menu now provides separate entry points for
+Autorunsc, Supertimeline, and the other worker parsers. Autorunsc has working
+Services, Drivers, Tasks, KnownDLLs, Logon, and Explorer review views, with
+combinable enabled, unverified, and missing-image filters. Other parser entries
+are marked **Rules pending**; existing timeline features continue to work.
+
+See [Parser Category menu installation and controls](PARSER-MENU.md).
+
 ## DFIR quick reference
 
 For everyday investigation commands, pivot tables, frequency filtering, and exports, start with the **[VisiData 3.5 Practical DFIR Guide](./DFIR-GUIDE.md)**.
