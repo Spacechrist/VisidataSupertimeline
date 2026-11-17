@@ -1,0 +1,2 @@
+# Tested VisiData API for the category/ZIP integration tests.
+visidata==3.5

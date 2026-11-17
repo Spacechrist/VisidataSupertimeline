@@ -1,6 +1,7 @@
 """Permanent VisiData Category menu with isolated, extensible parser modules."""
 from visidata import Sheet, ColumnItem, vd
 import autorunsc
+import artifact_categories as artifacts
 
 PARSERS = {}
 
@@ -35,14 +36,14 @@ class ParserCategories(Sheet):
 
 @Sheet.api
 def dfir_categories(sheet):
-    while isinstance(sheet, (ParserCategories, ParserInfo)):
+    while getattr(sheet, '_dfir_source_sheet', None) is not None:
         sheet = sheet._dfir_source_sheet
     vd.push(ParserCategories(sheet))
 
 
 @Sheet.api
 def dfir_open_parser(sheet, name):
-    while isinstance(sheet, (ParserCategories, ParserInfo)):
+    while getattr(sheet, '_dfir_source_sheet', None) is not None:
         sheet = sheet._dfir_source_sheet
     parser = PARSERS[name]
     if parser['handler']:
@@ -71,18 +72,32 @@ vd.addMenuItem('Category', 'All parsers', 'dfir-categories')
 register_parser('Autorunsc', 'autorunsc', 'Autostart configuration: Services, Drivers, Tasks, KnownDLLs, Logon, Explorer',
                 lambda sheet: sheet.autorunsc_menu())
 register_parser('Supertimeline', 'supertimeline', 'Cross-artifact timeline review; logic to be defined')
-register_parser('EVTXECmd', 'evtxecmd', 'Windows event logs')
-register_parser('MFTECmd', 'mftecmd', 'MFT and USN journal')
-register_parser('RECmd', 'recmd', 'Registry artifacts')
-register_parser('EZTools - Execution', 'ezexecution', 'Prefetch, Amcache, AppCompatCache, and LNK outputs')
-register_parser('EZTools - File and Folder', 'ezfilefolder', 'Jump Lists, ShellBags, and Recycle Bin outputs')
-register_parser('SQLECmd', 'sqlecmd', 'Mapped SQLite artifacts')
-register_parser('SRUM', 'srum', 'Application and network usage')
-register_parser('Hayabusa', 'hayabusa', 'Event log detection timeline')
-register_parser('Chainsaw', 'chainsaw', 'Event log hunting results')
+register_parser('EVTXECmd', 'evtxecmd', 'Windows event logs', lambda sheet, name='EVTXECmd': artifacts.open_categories(sheet, name))
+register_parser('MFTECmd', 'mftecmd', 'MFT and USN journal', lambda sheet, name='MFTECmd': artifacts.open_categories(sheet, name))
+register_parser('RECmd', 'recmd', 'Registry artifacts', lambda sheet, name='RECmd': artifacts.open_categories(sheet, name))
+register_parser('EZTools - Execution', 'ezexecution', 'Prefetch, Amcache, AppCompatCache, and LNK outputs', lambda sheet, name='EZTools - Execution': artifacts.open_categories(sheet, name))
+register_parser('EZTools - File and Folder', 'ezfilefolder', 'Jump Lists, ShellBags, and Recycle Bin outputs', lambda sheet, name='EZTools - File and Folder': artifacts.open_categories(sheet, name))
+register_parser('SQLECmd', 'sqlecmd', 'Mapped SQLite artifacts', lambda sheet, name='SQLECmd': artifacts.open_categories(sheet, name))
+register_parser('SRUM', 'srum', 'Application and network usage', lambda sheet, name='SRUM': artifacts.open_categories(sheet, name))
+register_parser('Hayabusa', 'hayabusa', 'Event log detection timeline', lambda sheet, name='Hayabusa': artifacts.open_categories(sheet, name))
+register_parser('Chainsaw', 'chainsaw', 'Event log hunting results', lambda sheet, name='Chainsaw': artifacts.open_categories(sheet, name))
 register_parser('PyrsistenceSniper', 'pyrsistencesniper', 'Persistence findings')
 register_parser('YARA-X', 'yarax', 'YARA scan results')
 register_parser('Filesystem Timeline', 'filesystem-timeline', 'Filesystem MACB timeline')
+
+
+@Sheet.api
+def dfir_review_current(sheet):
+    while getattr(sheet, '_dfir_source_sheet', None) is not None:
+        sheet = sheet._dfir_source_sheet
+    columns = tuple(col.name for col in sheet.columns)
+    parser = artifacts.infer_parser(artifacts.source_name(sheet), columns)
+    if parser not in artifacts.READY:
+        vd.fail('Open a supported forensic CSV first; use Category > All parsers for other modules')
+    artifacts.open_categories(sheet, parser)
+
+Sheet.addCommand('', 'dfir-review-current', 'sheet.dfir_review_current()', 'Open categories for this CSV')
+vd.addMenuItem('Category', 'Review this CSV', 'dfir-review-current')
 
 existing = Sheet('').getCommand('F2')
 if existing is None or existing.longname in ('autorunsc-menu', 'dfir-categories'):
