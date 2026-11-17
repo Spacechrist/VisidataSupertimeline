@@ -1,10 +1,10 @@
 # Permanent parser Category menu
 
-Install these two modules alongside the existing timeline extension:
+Install these four modules alongside the existing timeline extension:
 
 ```bash
 mkdir -p ~/.config/visidata
-cp autorunsc.py dfir_categories.py ~/.config/visidata/
+cp autorunsc.py dfir_categories.py artifact_categories.py dfir_catalog.py ~/.config/visidata/
 ```
 
 Append this loader **once** to your active VisiData configuration, preserving its
@@ -23,7 +23,7 @@ import dfir_categories
 
 If you use a custom plugin location, substitute that directory. Restart VisiData
 and open your CSV normally. This loader imports the modules once; it does not
-replace personal settings. Both modules must be installed together.
+replace personal settings. All four modules must be installed together.
 
 ## Menus and controls
 
@@ -57,10 +57,50 @@ The numeric and filter bindings apply only to the plugin's own sheets. Normal
 CSV sheet bindings and the existing timeline shortcuts are unchanged. Additional
 commands beginning with `autorunsc-` are available through Space.
 
-**Category → Supertimeline** and the other reserved parser entries currently open
-an informational page marked **Rules pending**. Their parser review logic is not
-yet implemented. Existing experimental timeline commands remain available through
-their current bindings; this menu does not change their behavior.
+Nine artifact modules now have working category and grouping views: EVTXECmd,
+MFTECmd, RECmd, EZTools Execution, EZTools File and Folder, SQLECmd, SRUM,
+Hayabusa, and Chainsaw. Use **Category → Review this CSV** for automatic
+schema-aware selection, or select the parser explicitly. Enter opens category
+rows or a grouping. Grouping counts are distinct values; category counts may
+overlap. All original CSV columns remain available, and view rows are independent
+copies. Parser mismatches are rejected rather than silently applying unrelated
+filters.
+
+Supertimeline, Filesystem Timeline, PyrsistenceSniper and YARA-X remain reserved
+in this menu because the supplied result archive contains no sample outputs for
+them. Existing experimental timeline commands and bindings remain available.
+
+## Open a result ZIP directly
+
+After restarting VisiData with the updated modules loaded:
+
+```bash
+vd -f dfirzip /path/to/DESKTOP-SDN1RPT_result_csvs_verified.zip
+```
+
+The archive catalog shows parser, artifact, profile, rows, representation and
+empty-report state. **Enter** opens a CSV directly from the ZIP without extracting
+or changing it. Then use **Category → Review this CSV** (or F2 and the parser).
+**q** returns through the views. **F5 in the ZIP catalog only** toggles primary
+reports versus all 136 reports.
+
+Primary/alternate is a presentation preference, not an evidence-quality verdict.
+The catalog prefers resolved SRUM provider tables and Timesketch EVTX when their
+matching alternatives are actually present. Raw-only reports stay primary. SRUM
+system tables remain Reference. Combined RECmd batches are Alternate when detail
+reports are present. None are deleted, and the archive initially displays all
+representations. Physical row totals are never labelled unique events.
+
+Categories preserve native flags and severity labels. Unallocated MFT records
+are not automatically labelled user-deleted; the native SI<FN flag is not a
+standalone timestomping verdict. Shimcache or Amcache presence is not proof of
+execution. SRUM numeric IDs are not labelled resolved usernames.
+
+A static catalog can be created without installing VisiData:
+
+```bash
+python3 dfir_catalog.py /path/to/results.zip --output /new/path/SOURCE-CATALOG.csv
+```
 
 ## Evidence handling
 
@@ -94,11 +134,17 @@ The tests use synthetic rows and subprocesses running real VisiData, separately
 from the existing timeline tests' mocked interface:
 
 ```bash
-python3 -m unittest discover -v
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m unittest discover -v
 ```
 
-Install VisiData 3.5 to run the new integration tests; they report skipped if the
-package is unavailable. No forensic CSVs are distributed in this repository.
+The pinned test dependency is VisiData 3.5. All 44 tests should run without
+skipping when it is installed. Without VisiData, integration tests explicitly
+report skipped. Tests use synthetic evidence and exercise ZIP navigation,
+category/group drill-down, original-value preservation, parser guards, and
+existing-menu/keybinding compatibility. No forensic CSVs are distributed in
+this repository.
 
 To uninstall the menu, remove its loader block from your active configuration and
 restart VisiData. Keep the existing timeline loader if you still use it.

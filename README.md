@@ -488,3 +488,12 @@ The offline tests use a **mock VisiData API** to check configuration, original T
 - IRFlow profiles: [kape-profiles.js](https://github.com/r3nzsec/irflow-timeline/blob/main/src/constants/kape-profiles.js)
 
 **Acknowledgment:** Plaso/L2TCSV classification and its seven exact color definitions follow Eric Zimmerman's Timeline Explorer source and saved layout. Other supported timeline formats retain IRFlow's source-based coloring and light default palette. Neither is a universal DFIR standard; the Plaso implementation intentionally reproduces a specific tool's behavior.
+
+
+## CSV result categories and ZIP catalog
+
+The permanent Category menu now includes schema-aware views for nine artifact
+parser families and a read-only ZIP catalog (`vd -f dfirzip results.zip`).
+See [PARSER-MENU.md](PARSER-MENU.md) for installation, navigation, alternate
+representation handling, and evidence interpretation limits. The new views
+retain original columns and do not modify source CSVs or archives.
